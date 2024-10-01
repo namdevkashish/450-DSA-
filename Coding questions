@@ -1,0 +1,909 @@
+1. Write c code for the following question:
+
+You are given an array A of N numbers. You can perform the following operation:
+
+• swap any two adjacent numbers in A.
+
+Your task is to print the minimum number of operations to be performed such that A satisfies the following property:
+
+⚫ the maximum number in A should occupy the first position.
+
+• The minimum number in A should occupy the last position.
+
+• The order of other numbers doesn't matter.
+
+• A necessarily does not contain distinct elements. That is, A might contain more than one occurrence of a number.
+
+Input Format
+
+• The first line of input consists of a single integer N, derroting the size of A.
+
+• The next N lines contain the integers denoting the elements of A.
+
+Constraints
+
+2 <= N <= 100
+
+• 1<= A; <= 100
+
+Output Format
+
+• Print a single integer, denoting the solution to the problem.
+
+Evaluation Parameters
+
+Input
+
+4
+
+2
+
+4
+
+3
+
+1
+
+Output 
+
+1
+
+Explanation
+
+We swap the first and the second element to get (4 2 3 1). This satisfies the property given above. Hence the answer is 1.
+
+Execution time limit
+
+2 seconds
+
+Having an issue with this question?
+
+Report
+
+Complete the following C code:
+
+#include <ctype.h>
+
+#include <limits.h>
+
+#include <math.h>
+
+#include <stdbool.h>
+
+#include <stddef.h>
+
+#include <stdint.h>
+
+#include <stdio.h>
+
+#include <stdlib.h>
+
+#include <string.h>
+
+char* readline();
+
+char* 1trim(char*);
+
+char* rtrim(char *);
+
+int parse_int(char*);
+
+/*
+
+*Complete the 'partial_sort' function below.
+
+*The function is expected to return an INTEGER.
+
+*The function accepts INTEGER ARRAY A-as parameter.
+
+*
+
+*/
+
+int partial_sort(int A_count, int* A) {
+
+// Write-your-code here
+
+}
+
+int main() {
+
+int-A_count = parse_int(ltrim(rtrim(readline())));
+
+-int* A = malloc(A_count * sizeof(int));
+
+for (int i=0; i < A_count; i++) {
+
+int A_item parse_int(ltrim(rtrim(readline())));
+
+*(A+1) A item;
+
+int result partial_sort(A_count, A);
+
+printf("%d", result);
+
+return 0;
+
+コ
+
+char readline() {
+
+size t alloc_length 1024;
+
+size t data length = 0;
+
+char data malloc(alloc_length);
+
+while (true) {
+
+char cursor data + data_length;
+
+char line fgets(cursor, alloc_length data_length, stdin);
+
+if (Iline) {
+
+break;
+
+}
+
+data_length += strlen(cursor);
+
+if (data_length < alloc_length 1 || data[data_length-1]
+
+\n'){
+
+break;
+
+}
+
+alloc_length <<= 1;
+
+data realloc(data, alloc_length);
+
+if (!data) {
+
+data = \0';
+
+break;
+
+}
+
+}
+
+if (data[data_length 1]'\n') {
+
+data[data_length-1] = '\0';
+
+data realloc(data, data length);
+
+if (Idata) { data = '\0';
+
+}
+
+} else {
+
+data realloc(data, data_length + 1);
+
+if (Idata) { data = '\0';
+
+} else {
+
+data[data_length] = '\0';
+
+}
+
+}
+
+return data;
+
+}
+
+char* ltrim(char* str) {
+
+if (Istr) {
+
++ return'\0';
+
+}
+
+if (1*str) {
+
+return str;
+
+}
+
+while (*str != '\0' && isspace(*str)) {
+
+str++;
+
+}
+
+return str;
+
+}
+
+char* rtrim(char* str) {
+
+if (!str) {
+
+return '\0';
+
+}
+
+if (1*str) {
+
+return str;
+
+}
+
+char-end str+ strlen(str) -1;
+
+while (end >= str && isspace (*end)) {
+
+end--;
+
+}
+
+*(end +1)\0';
+
+return str;
+
+int parse_int(char* str) {
+
+char* endptr;
+
+int value = strtol (str, &endptr, 10);
+
+if (endptr=str || *endptr != '\0') {
+
+exit(EXIT_FAILURE);
+
+}
+
+return value;
+
+}
+
+
+2. Given an array containing k distinct numbers taken from 0, 1, 2, ...., k, your task find the one that is missing from the array.
+
+Input Format
+
+The first line contains an integer K, denoting the size of the array.
+
+The next K lines contain the elements of the array, each on a new line.
+
+Constraints
+
+1K 1000
+
+0<= arr[i]<=1000
+
+Output Format
+
+• A single line containing the missing number from the array.
+
+Evaluation Parameters
+
+Sample Input
+
+P
+
+15
+
+e
+
+1
+
+3246
+
+5
+
+8
+
+9
+
+10
+
+12
+
+11
+
+13
+
+14
+
+15
+
+• Sample Output
+
+7
+
+Explanation
+
+The array contains 15 distinct numbers taken from the set (0, 1, 2, ..., 15) in the given sample input. The number missing from this array is 7, which is not present in the array.
+
+Execution time limit
+
+10 seconds
+
+Having an issue with this question?
+
+Report
+
+Complete the following C code:
+
+#include <assert.h>
+
+#include <ctype.h>
+
+#include <limits.h>
+
+#include <math.h>
+
+#include <stdbool.h>
+
+#include <stddef.h>
+
+#include <stdint.h>
+
+#include <stdio.h>
+
+#include <stdlib.h>
+
+#include <string.h>
+
+char* readline();
+
+char* 1trim(char*);
+
+char* rtrim(char *);
+
+int parse_int(char*);
+
+/*
+
+* Complete the 'moni_array' function below.
+
+*
+
+*The function is expected to return an INTEGER.
+
+*The function accepts INTEGER ARRAY arr as parameter.
+
+/*
+
+int moni_array(int arr_count, int* arr) {
+
++ // Write your-code-here
+
+I
+
+}
+
+int main() {
+
+int arr_count = parse_int(ltrim(rtrim(readline())));
+
+int arr = malloc(arr_count * sizeof(int));
+
+for (int i=0; i < arr_count; i++) {
+
+int arr_item parse_int(ltrim(rtrim(readline())));
+
+*(arr + i) arr_item;
+
+}
+
+int result moni_array(arr_count, arr);
+
+printf("%d", result);
+
+return 0;
+
+}
+
+char* readline() {
+
+size t alloc_length 1024;
+
+size_t data_length = 0;
+
+char data malloc(alloc_length);
+
+while(true) {
+
+char* cursor data + data_length;
+
+char* line fgets(cursor, alloc_length---data_length, stdin);
+
+if (lline) {
+
+break;
+
+}
+
+data_length += strlen(cursor);
+
+if (data_length < alloc_length-1-||-data[data_length-1]==
+
+'\n') {
+
+break;
+
+}
+
+alloc_length <<=-1;
+
+data realloc(data, alloc_length);
+
+if (Idata) { data = '\0';
+
+break;
+
+}
+
+}
+
+if (data[data_length - 1] == '\n') { data[data_length - 1] = '\0';
+
+data realloc(data, data_length);
+
+if (Idata) { data= '\0';
+
+}
+
+} else {
+
+data realloc(data, data_length + 1);
+
+if (Idata) { data = '\0';
+
+}else {
+
+data[data_length] = '\0';
+
+}
+
+}
+
+return-data;
+
+}
+
+char* 1trim(char* str) {
+
+if (Istr) {
+
+return'\0';
+
+}
+
+if (1*str) {
+
+return-str;
+
+}
+
+while (*str != '\0' && isspace(*str)) {
+
+str++;
+
+5
+
+6
+
+7
+
+return str;
+
+8
+
+}
+
+9
+
+0
+
+char* rtrim(char* str) (
+
+1
+
+if (!str) {
+
+2
+
+return '\0';
+
+3
+
+}
+
+24
+
+25
+
+if (1*str) {
+
+26
+
+return str;
+
+27
+
+}
+
+28
+
+29
+
+char-end str + strlen(str)1;
+
+30
+
+31
+
+while (end->=-str && isspace(*end)) {
+
+32
+
+end--;
+
+33
+
+}
+
+34
+
+35
+
+*(end+1)= '\0';
+
+36
+
+37
+
+return-str;
+
+38
+
+}
+
+39
+
+40
+
+41
+
+142
+
+43
+
+44
+
+145
+
+int parse_int(char* str) {
+
+char* endptr;
+
+int value = strtol (str, &endptr, 10);
+
+exit(EXIT FAILURE);
+
+if (endptr str-||-*endptr != '\0') {
+
+146
+
+}
+
+147
+
+148
+
+return value;
+
+149
+
+}
+
+
+3. Write c code for the following question:
+
+Write a program that will accept two lists comprising of difterel program should merge the two lists, sort them, and print them in reverse order. Below is an example of the input supplied to the program. The first line of input signifies the size of the first list, the second line signifies the size of the second list, followed by sets of different numbers (one set per line),
+
+Sample Input
+
+2
+
+4
+
+45
+
+56
+
+67
+
+88
+
+90
+
+Sample Output
+
+90
+
+88
+
+67
+
+56
+
+45
+
+1
+
+Note
+
+In the case of input data being supplied to the question, it should be assumed to be a console input.
+
+Execution time limit
+
+2 seconds
+
+Having an issue with this question?
+
+Report
+
+
+4. Take input line of string and  If 'is' and 'a' present in each line then print addition of positions both if one of them is not present then add -1 in position
+
+
+5. Missing number from k numbers from an array
+
+
+6. Inserting a substring at kth position of the given string
+Problem Statement
+
+You are given a main string and a substring. Your task is to insert the substring at a specified position in the main string.
+
+Input Format
+
+1. The first line contains the main string ss.
+
+2. The second line contains the substring sss
+
+3. The third line contains an integer p, the position at which the substring will be inserted.
+
+Constraints
+
+1 ss.length < 1000
+
+• 1 sss.length < 1000
+
+• 1 <p<100
+
+Output Format
+
+• Print the resulting string after inserting the substring at the specified position.
+
+Sample Input
+
+Velocity
+
+loc
+
+3
+
+Sample Output
+
+Veclocity
+
+
+7. Eliminating lexical geographical character from the given string where user can remove 1 pa8r at a time and compute how many times it can be performed
+
+
+8. Problem Statement
+
+You are given three strings: A, B, and C. Your task is to determine whether you can form both strings A and B using the characters from string C. After forming A and B, there should be no characters left in C.
+
+Input Format
+
+The first line contains string A.
+
+• The second line contains string B.
+
+The third line contains string C.
+
+Constraints
+
+• Length of A, B, and C is between 1 and 100.
+
+• A, B, and C contain only uppercase English letters.
+
+Output Format
+
+If it is possible to form A and B from the letters of C with no letters left over in C, print "YES".
+
+Otherwise, print "NO"
+
+Sample Input
+
+Copy code
+
+ANNMMC
+
+LLDKKD
+
+ANNLLDKKCMMD
+
+Sample Output
+
+objectivec
+
+Copy code
+
+YES
+
+Explanation
+
+You can use all the letters of "ANNLLDKKCMMD" to write "ANNMMC" and "LLDKKD". Therefore, C is fully utilized.
+
+
+9. Problem Statement
+
+t
+
+Write a program that accepts a comma separated sequence of words as imput and prints the words in a comma-separated sequence after sorting them alphabetically
+
+Sample Input
+
+order, hello, would, test
+
+Sample Output
+
+hello, order, test, would
+
+Note
+
+You should assume that input to the program is from console input (raw_input)
+
+Execution time limit
+
+2 seconds
+
+
+10. Problem Statement
+
+Given is a list of strings of an unknown length, you are required to give as output the same list, but with the lowercase versions of the given values, sorted lexicographically and breaking ties on sorting, by taking the longest string. Note that this is not the regular lexicographic sorting, as it doesn't take the smallest string for breaking ties. For example, in regular sorting, "aaa" is greater than "aa", whereas in this problem "aaa" is smaller than "aa".
+
+Input Format
+
+• Input contains some lines each having a string in it
+
+Constraints
+
+• The total number of strings does not exceed 105
+
+• The total number of characters does not exceed 105
+
+Ouput Format
+
+• Ouput the same list as provided in the input but sorted in the way described in the problem statement
+
+Sample Input 1
+
+aa
+
+aaaaaaaaaa
+
+aaaaaa
+
+Sample Output T
+
+aaaaaaaaaa
+
+aaaaaa
+
+aa
+
+
+11. Problem Statement
+
+Write a program that takes an integer N and N lines. each containing a pair of dates as input. For each pair of dates, the program should print the output based on the following conditions
+
+• If the first date is earlier than the second date, then print "E"
+
+• If the first date is equal to the second date, then print "S".
+
+• If the first date is later than the second date, then print "L"
+
+The date format will be: MM/DD/YYYY
+
+Input Format
+
+• First line contains an integer N
+
+• Next N lines contain pair of dates in the format MM/DD/YYYY
+
+Constraints
+
+• 1 <= N <= 105
+
+Output Format
+
+• Output N lines, each containing the required
+
+output corresponding to each pair of dates.
+
+Example 1:
+
+Input
+
+3
+
+08/01/2008 07/01/2009
+
+08/01/2008 08/01/2008
+
+07/03/2009 07/02/2009
+
+Output:
+
+E
+
+S
+
+L
+
+Example 2:
+
+Input:
+
+1
+
+07/28/2012 07/29/2012
+
+Output:
+
+E
+
+Note: The input and the output test cases should be an exact match as shown in the above example, otherwise the test cases will fail and you will be awarded No marks.
+
+Execution time limit
+
+2 seconds
+
+
+12. Problem Statement
+
+Write a program that accepts a variable number of strings as input and locates the position of the character "a" and the string "is" in each input. The program should print the sum of the positions found. If a particular string or character is not found then the position should be considered to be -1.
+
+For example, if the word "mistake" is supplied to the program, the string "is" lies at position 1 (considering the first position to be zero) and the character "a" lies at position 4, hence the sum of the positions will be 4+1=5. Similarly if the word "test" is supplied to the program, both "a" and "is" are not present, hence the result will be (-1) + (-1) = -2.
+
+Below is an example of the input supplied to the program followed by the output. The first line of input indicates the number of strings supplied to the program, followed by the actual strings (one per line)
+
+Sample Input
+
+3
+
+It is a simple problem 
+
+Raspberry is sweet
+
+test
+
+Sample Output
+
+9
+
+11
+
+-2
+
+Note
+
+In the case of input data being supplied to the question, it should be assumed to be a console input.
+
+Execution time limit
+
+10 seconds
